@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop no-websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms no-csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Techwolf - Gentoo Overlay</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- CSS: implied media="all" -->
+<link rel="stylesheet" href="./style.css">
+<body>
+<div class="banner l">
+	<a href="mailto:techwolf.lupindo@gmail.com">Suggestions and problems can be sent to <u class="m q">techwolf.lupindo@gmail.com</u></a>
+</div>
+<div class="container">
+	<div id="main" role="main">
+		<hr>
+		<section>
+		<header>
+		<h1 class="h2 mbn xxxxxxxl">Gentoo Overlay Project</h1>
+		</header>
+		<p class="xxxxl">
+			<!--Subtitle.-->
+		</p>
+		<p class="xl" style="margin-top: -10px">
+			Primary purpose is for Second Life with the following added:
+		</p>
+		<ul class="xl">
+			<li>Working streaming media on 64-bit systems.</li>
+			<li>Working vivox on 64-bit builds.</li>
+			<li>Spacenav 3D joystick support.</li>
+			<li>Many build fixes, no more stupid gcc errors that prevent builds.</li>
+			<li>Some pjira bugfix patches.</li>
+			<li>Some pjira feature add patches.</li>
+			<li>A few third party patches that are useful to the everyday user while not interfering with the existing User Interface. IE:One can not or turn off the feature within the client.</li>
+		</ul>
+		</br>
+		<hr>
+		</br>
+		<h2 class="h3 mbn">To use my overlay</h2>
+		</br>
+		<p class="xl">
+			As root:
+		</p>
+		<p class="xl">
+			<code class="s">
+			layman -f -a techwolf -o 'http://Techwolf.github.io/overlays.xml' </code>
+		</p>
+		<p class="xl">
+			 Or if using paludis:
+		</p>
+		<p class="xl">
+			<code class="s">
+			playman --layman-url http://Techwolf.github.io/overlays.xml -a techwolf </code>
+		</p>
+		<p class="xl">
+			<code class="s">"emerge -av secondlife" </code>for the main client<br/>or<br/><code class="s">"emerge -av firestorm-hg"</code> for the firestorm client
+		</p>
+		</br>
+		<p class="xl" style="margin-top: -10px">
+			The secondlife package (that is no longer) provided by portage differs from this overlay:
+		</p>
+		<ul class="xl">
+			<li>No voice support in the portage provided ebuild.</li>
+			<li>No USE flags support for vivox, openal, webkit, gstreamer, fmod, or dbus in the portage provided ebuild.</li>
+			<li>Joystick INTENDEDLY disabled in the portage provided ebuild. This includes all joysticks, including the spacenav 3D joystick.</li>
+			<li>The ebuilds in this overlay provide full joystick support, voice support, USE flag support.</li>
+		</ul>
+		</br>
+		<hr>
+		</br>
+		<h2 class="h3 mbn">Optional USE flags</h2>
+		</br>
+		<ul class="xl">
+			<li>openal: Enable the openal soft sound system, default on.</li>
+			<li>vivox: Enable the voice support. This binary requires some 32-bit libs on 64-bit system. The 64-bit build of the Secondlife can use the 32-bit vivox binary. Default on.</li>
+			<li>fmod: Enable the fmod sound support, default off.</li>
+			<li>llwebkit: Enable the qt-webkit support. Disabling this may reduce some search functions within the Secondlife client. Default on.</li>
+			<li>dbus: Enable or disable the dbus.</li>
+		</ul>
+		</br>
+		<hr>
+		</br>
+		<h2 class="h3 mbn">Other programs</h2>
+		<p class="xl">
+			There are other secondlife related programs in this overlay.
+		</p>
+		<ul class="xl">
+			<li>Firestorm <span class="s q">This is a homebrewn viewer which adds new functionality to the viewer with the intent of easing the users interaction with the environment. Popular with powerusers and l33t users.</span></li>
+			<a class="s" href="http://www.firestormviewer.org/">http://www.firestormviewer.org/</a>
+			</br>
+			<code class="s">"emerge -av firestorm-hg"</code>
+			<li>Imprudence <span class="s q">Metaverse (SL) viewer with an emphasis on usability and bold changes.</span></li>
+			<a class="s" href="http://imprudenceviewer.org/">http://imprudenceviewer.org/</a>
+		</ul>
+		</br>
+		<p class="xl">
+			Non-3D GUI clients, for when you just need to chat and other things that don't need a full 3D GUI view.
+		</p>
+		<ul class="xl">
+			<li>Radegast and Radegast-git <span class="s q">Text only client.</span></li>
+			<a class="s" href="http://radegastclient.org/wp/">http://radegastclient.org/wp/</a>
+			<li>Slitechat <span class="s q">A Lite IM/Chat Client for Second Life</span></li>
+			<a class="s" href="http://slitechat.dooglio.net/">http://slitechat.dooglio.net/</a>
+		</ul>
+		</br>
+		<hr>
+		</br>
+		<h2 class="h3 mbn">LL CMS Branches</h2>
+		</br>
+		<p class="xl">
+			There is several mercurial branches from Linden Labs and third party viewers. They are:
+		</p>
+		<ul class="xl">
+			<li>secondlife-hg is a live hg pull from the viewer-development branch. This branch is being maintained by LL and the open source community.</li>
+			<li>firestorm-hg is a live hg pull from the phoenix viewer project of Linden Labs viewer 2/3.x based code.</li>
+			<li>All branches do a live pull from the hg repository, to update, just re-emerge them.</li>
+			<li>All can be installed at the same time.</li>
+			<li>To run the client, just use the menu or from the command line, secondlife or firestorm-hg for the client you wish to run.</li>
+		</ul>
+		</br>
+		<hr>
+		</br>
+		<h2 class="h3 mbn">3Dconnexion's SpaceNavigator</h2>
+		</br>
+		<p class="xl">
+			3Dconnexion's SpaceNavigator users may need to do the following:
+		</p>
+		<ol class="xl">
+			<li>Uninstall any 3Dconnexion company supplied linux drivers as they conflict with the one built into the kernel. The SpaceNavigator shows up as a HID device that Secondlife can use.</li>
+			<li>Create some udev rules if they are not supplied with the distro. Currently gentoo does not.</li>
+		</ol>
+		</br>
+		<p class="xl">
+			<code class="s"><textarea rows="9" cols="150">
+cat << EOF > /etc/udev/rules.d/91-spacenavigator.rules
+KERNEL=="event[0-9]*", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c603", SYMLINK+="input/spacemouse", GROUP="plugdev", MODE="664"
+KERNEL=="event[0-9]*", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c623", SYMLINK+="input/spacetraveler", GROUP="plugdev", MODE="664"
+KERNEL=="event[0-9]*", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c626", SYMLINK+="input/spacenavigator", GROUP="plugdev", MODE="664"
+EOF
+			</textarea>
+			
+			</code>
+		</p>
+		<ol class="xl" start="3">
+			<li>Create some hal policy rules to prevent the SpaceNavigator from being used as a mouse with hotpluggin on x-org. Only needed if you find the joystick controlling the mouse.</li>
+		</ol>
+		</br>
+		<p class="xl">
+			<code class="s">
+			<textarea rows="11" cols="150">
+cat << EOF > /etc/hal/fdi/policy/3Dconnexion_SpaceNavigator.fdi
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<deviceinfo version="0.2">
+  <device>
+    <match key="info.product" contains="3Dconnexion SpaceNavigator">
+      <merge key="input.x11_driver" type="string"></merge>
+    </match>
+  </device>
+</deviceinfo>
+EOF
+			</textarea>
+			</code>
+		</p>
+		</br>
+		<hr>
+		</br>
+		<h2 class="h3 mbn">My ~/.alsoftrc, adjust for your system</h2>
+		</br>
+		<p class="xl">
+			<code class="s">
+			<textarea rows="8" cols="150">
+[general]
+format=AL_FORMAT_51CHN16
+
+[alsa]
+device=plug:dmixs51
+# mmap=off
+			
+			</textarea>
+			</code>
+		</p>
+		</br>
+		<hr>
+		</br>
+		<h2 class="h3 mbn">My ~/.asoundrc, adjust for your system</h2>
+		</br>
+		<p class="xl">
+			<code class="s">
+			<textarea rows="30" cols="150">
+# allows mixing of more then one program at the same time, this config is for htomega Stricker 7.1 --Techwolf 09/20/2006
+# mplayer -ao alsa:device=plug=dmixs51
+# secondlife and other openal apps, add device=plug:dmixs51 to [alsa] section of .alsoftrc file
+
+# the 6 channel dmix plugin
+pcm.dmixs51 {
+    type dmix
+    ipc_key 1024
+    ipc_key_add_uid false # let multiple users share
+    ipc_perm 0660 # IPC permissions (octal, default 0600)
+    slave {
+	pcm "hw:0,1"
+	rate 48000
+	channels 6
+	period_time 0
+	period_size 1024
+	buffer_time 0
+	buffer_size 4096
+    }
+    hint {
+        show on
+        description "dmix surround 5.1"
+    }
+}
+
+
+# The "hw:0,1" in the dmixs51 slave section is because I have a C-Media PCI CMI8738-MC6, that uses the second device for surround output.
+# above taken from http://alsa.opensrc.org/index.php/Dmix
+# more info at http://alsa.opensrc.org/Cmipci
+
+pcm.dsnooped {
+    type dsnoop
+    ipc_key 2048
+    ipc_key_add_uid false
+    ipc_perm 0660
+    slave {
+        pcm "hw:0,1"
+        channels 2
+        period_size 1024
+        buffer_size 4096
+        rate 48000
+        periods 0
+        period_time 0
+    }
+}
+
+pcm.duplex {
+     type asym
+     playback.pcm "dmixs51"
+     capture.pcm "hw:1,0"
+}
+
+# for aoss
+pcm.dsp "duplex"
+pcm.dsp0 "duplex"
+pcm.dsp1 "duplex"
+
+# redirect default alsa to dmix
+pcm.!default {
+        type plug
+        slave.pcm "duplex"
+}
+
+			</textarea>
+			</code>
+		</p>
+		<hr>
+		</br>
+		<hr>
+		</section>
+	</div>
+	<!-- /#main -->
+	<footer class="ac">
+	EOF </footer>
+</div>
+<!-- /.container -->
+</body>
+</html>
