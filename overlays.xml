@@ -2,7 +2,7 @@
 <!DOCTYPE repositories SYSTEM "http://www.gentoo.org/dtd/repositories.dtd">
 <repositories xmlns="" version="1.0">
   <repo quality="experimental" status="unofficial">
-    <name>techwolf</name>
+    <name>Techwolf</name>
     <description lang="en">Techwolf overlay for secondlife</description>
     <homepage>https://github.com/Techwolf/techwolf-overlay</homepage>
     <owner type="person">
